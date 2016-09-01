@@ -6,6 +6,8 @@ RUN buildDeps=" \
 		linux-headers \
 		openssl-dev \
 		tar \
+		asciidoc \
+		xmlto \
 	"; \
 	set -x \
 	&& apk add --update openssl \
