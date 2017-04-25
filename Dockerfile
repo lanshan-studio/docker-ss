@@ -12,7 +12,7 @@ RUN buildDeps=" \
 	set -x \
 	&& apk add --update openssl pcre-dev \
 	&& apk add $buildDeps \
-	&& curl -SL "https://github.com/shadowsocks/shadowsocks-libev/archive/v2.5.5.tar.gz" -o ss.tar.gz \
+	&& curl -SL "https://github.com/shadowsocks/shadowsocks-libev/archive/v2.6.5.tar.gz" -o ss.tar.gz \
 	&& mkdir -p /usr/src/ss \
 	&& tar -xf ss.tar.gz -C /usr/src/ss --strip-components=1 \
 	&& rm ss.tar.gz \
