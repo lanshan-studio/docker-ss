@@ -8,11 +8,15 @@ RUN buildDeps=" \
 		tar \
 		asciidoc \
 		xmlto \
+		mbedtls-dev \
+		libsodium-dev \
+		c-ares-dev \
+		libev-dev \
 	"; \
 	set -x \
 	&& apk add --update openssl pcre-dev \
 	&& apk add $buildDeps \
-	&& curl -SL "https://github.com/shadowsocks/shadowsocks-libev/archive/v2.6.2.tar.gz" -o ss.tar.gz \
+	&& curl -SL "https://github.com/shadowsocks/shadowsocks-libev/releases/download/v3.1.0/shadowsocks-libev-3.1.0.tar.gz" -o ss.tar.gz \
 	&& mkdir -p /usr/src/ss \
 	&& tar -xf ss.tar.gz -C /usr/src/ss --strip-components=1 \
 	&& rm ss.tar.gz \
